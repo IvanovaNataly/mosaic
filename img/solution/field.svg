@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7F268342-7A6D-4762-8F7A-3E33602BEEA1</title>
+    <g id="Soulotion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Solution-Page---English-CRM" transform="translate(-1145.000000, -933.000000)">
+            <g id="Soulotions" transform="translate(403.000000, 933.000000)">
+                <g id="Field-Service" transform="translate(705.000000, 0.000000)">
+                    <g id="Asset-23" transform="translate(37.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="100" height="100"></rect>
+                        <path d="M39,49.64 L32,51.64 C32,51.64 27,52.64 27,57.64 L27,78.64 C27.0079856,79.4078282 27.3366355,80.1373476 27.9064432,80.6520739 C28.4762509,81.1668002 29.2353136,81.4198479 30,81.35" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M61,49.64 L68,51.64 C68,51.64 73,52.64 73,57.64 L73,78.64 C72.9920144,79.4078282 72.6633645,80.1373476 72.0935568,80.6520739 C71.5237491,81.1668002 70.7646864,81.4198479 70,81.35" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <rect id="Rectangle" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x="31" y="69.36" width="38" height="21.29"></rect>
+                        <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="31" y="65.36" width="38" height="19.29" rx="0.69"></rect>
+                        <path d="M68,66.36 L68,83.64 L32,83.64 L32,66.36 L68,66.36 M68.31,64.36 L31.69,64.36 C30.7566388,64.36 30,65.1166388 30,66.05 L30,84 C30,84.9333612 30.7566388,85.69 31.69,85.69 L68.31,85.69 C69.2433612,85.69 70,84.9333612 70,84 L70,66.05 C70,65.1166388 69.2433612,64.36 68.31,64.36 Z" id="Shape" fill="#666666" fill-rule="nonzero"></path>
+                        <path d="M58.8400058,30.68 L58.8400058,35 C58.8426542,37.2825939 57.9377572,39.4726075 56.3246566,41.0875838 C54.711556,42.7025601 52.5225955,43.61 50.24,43.61 L49.76,43.61 C47.4774045,43.61 45.288444,42.7025601 43.6753434,41.0875838 C42.0622428,39.4726075 41.1573458,37.2825939 41.1599942,35 L41.1599942,30.77" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polygon id="Path" stroke="#666666" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" points="44 56.64 50 52.64 44 46.64 39 48.64"></polygon>
+                        <polygon id="Path" stroke="#666666" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" points="56 56.64 50 52.64 56 46.64 61 48.64"></polygon>
+                        <polyline id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="46 56 48.38 58.64 51.54 58.64 53.62 56.07"></polyline>
+                        <line x1="48" y1="58.64" x2="47" y2="65" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="52" y1="58.64" x2="53" y2="65" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="35" y1="61" x2="35" y2="64.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="65" y1="61" x2="65" y2="64.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="45" y1="42.64" x2="45" y2="47.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="55" y1="42.64" x2="55" y2="47.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path d="M39.2,30.14 C37.8523748,30.9498208 37.2101238,32.5588738 37.6297187,34.0740779 C38.0493137,35.589282 39.4277717,36.638754 41,36.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M60.64,30.14 C61.9876252,30.9498208 62.6298762,32.5588738 62.2102813,34.0740779 C61.7906863,35.589282 60.4122283,36.638754 58.84,36.64" id="Path" stroke="#666666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M38,24.36 L38,23.07 C38,16.6027456 43.2427456,11.36 49.71,11.36 L50.29,11.36 C56.7572544,11.36 62,16.6027456 62,23.07 L62,24.36" id="Path" stroke="#FAB062" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M53,24.36 L63.76,24.36 C64.1686907,24.36 64.5,24.6913093 64.5,25.1 L64.5,29.4 C64.5,29.8086907 64.1686907,30.14 63.76,30.14 L36.66,30.14 C36.2496605,30.14 35.9154712,29.8103031 35.91,29.4 L35.91,25.1 C35.9154712,24.6896969 36.2496605,24.36 36.66,24.36 L47,24.36" id="Path" stroke="#FAB062" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <polyline id="Path" stroke="#FAB062" stroke-width="2" fill="#FFFFFF" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" points="46 17.64 46 9.36 54 9.36 54 17.64"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

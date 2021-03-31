@@ -1,0 +1,279 @@
+// Roboto font
+@import 'font';
+
+// Custom system
+@import 'variables';
+@import 'colors';
+
+// Article card
+@import 'card';
+
+%input {
+    font-family: $font-family-main;
+    font-size: $middle-upper-font-size;
+    letter-spacing: 0.11px;
+    @include respond-to(handhelds) {
+        font-size: $base-font-size;
+    }
+}
+
+.mosaic {
+    direction: $direction;
+    max-width: $width-wide-screen;
+    //margin-top: $lobby-search-height / -2;
+    margin-top: 40px;
+    margin-#{$start-direction}: auto;
+    margin-#{$end-direction}: auto;
+    @media screen and (max-width: $width-wide-screen) {
+        max-width: unset;
+        margin-#{$start-direction}: $margin-side-mobile;
+        margin-#{$end-direction}: $margin-side-mobile;
+    }
+    .on-backdrop & {
+        pointer-events: none;
+    }
+
+    *, *:after, *:before {
+        box-sizing: border-box;
+    }
+
+    .ellipsis {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .clamp2 {
+        @include clamp;
+    }
+
+    .clamp3 {
+        @include clamp(3);
+    }
+
+    .backdrop {
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        position: fixed;
+        top: 0;
+        #{$start-direction}: 0;
+        z-index: 90;
+        opacity: 0.2;
+        pointer-events: none;
+
+        .on-backdrop & {
+            display: block;
+        }
+    }
+
+    &-hero {
+        height: $lobby-hero-height;
+        background-color: $layout-placeholder;
+        background-repeat: no-repeat;
+        background-size: cover;
+        mix-blend-mode: darken;
+        position: relative;
+        @include respond-to(handhelds) {
+            height: $lobby-hero-height-mobile;
+        }
+    }
+
+    &-hero-text {
+        direction: $direction;
+        padding-top: 133px;
+        padding-bottom: 157px;
+        @include respond-to(handhelds) {
+            padding-top: 90px;
+            padding-bottom: 60px;
+        }
+        @media screen and (max-width: 325px) {
+            padding-top: 70px;
+        }
+    }
+
+    &-title {
+        font-family: $font-family-accent;
+        font-size: $giant-font-size;
+        color: $white;
+        letter-spacing: 0.36px;
+        max-width: $lobby-title-width;
+        line-height: 1.3;
+        margin: 0 auto;
+        position: relative;
+        @media screen and (max-width: $lobby-title-width + $margin-side-mobile * 2) {
+            font-size: 6.5vw;
+            margin-#{$start-direction}: $margin-side-mobile;
+            margin-#{$end-direction}: $margin-side-mobile;
+        }
+        @include respond-to(handhelds) {
+            font-size: $middle-super-font-size;
+            letter-spacing: 0.14px;
+            line-height: 40px;
+            margin-#{$start-direction}: 48px;
+            margin-#{$end-direction}: 48px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 83px;
+            height: 6px;
+            background-color: $system-decoration;
+            transform: skewX(20deg * $transform-direction);
+            position: absolute;
+            bottom: -30px;
+            #{$start-direction}: 0;
+            @include respond-to(handhelds) {
+                bottom: -25px;
+            }
+        }
+    }
+
+    .search {
+        &-container {
+            width: $lobby-search-width;
+            height: $lobby-search-height;
+            border-radius: 2px;
+            box-shadow: 0 2px 13px 0 rgba(84,100,193,0.16);
+            margin-#{$start-direction}: auto;
+            margin-#{$end-direction}: auto;
+            position: relative;
+            &::placeholder {
+                @extend %input;
+                color: $text-light;
+            }
+            @include respond-to(medium-screens) {
+                width: 100%;
+            }
+            @include respond-to(handhelds) {
+                height: $lobby-search-height-mobile;
+            }
+        }
+
+        &-input {
+            @extend %input;
+            color: $text-dark;
+            width: 100%;
+            height: 100%;
+            padding-#{$end-direction}: 34px + 14px + 30px;
+            padding-#{$start-direction}: 34px;
+            border: none;
+            position: relative;
+            z-index: 98;
+            pointer-events: all;
+            @include respond-to(handhelds) {
+                padding-#{$end-direction}: 20px + 26px + 10px;
+                padding-#{$start-direction}: 24px;
+            }
+        }
+
+        &-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0;
+            width: 42px;
+            height: 42px;
+            @include resetBtn;
+            position: absolute;
+            top: 18px;
+            #{$end-direction}: 21px;
+            z-index: 99;
+            pointer-events: all;
+            &:after {
+                @include icon('../img/search.svg', 29px, 30px);
+                transform: scaleX(1 * $transform-direction);
+                @include respond-to(handhelds) {
+                    @include icon('../img/search.svg', 26px, 26px);
+                }
+            }
+            .on-backdrop & {
+                &:after {
+                    @include icon('../img/close-search.svg', 29px, 30px);
+                }
+            }
+            @include respond-to(handhelds) {
+                top: 8px;
+                #{$end-direction}: 10px;
+            }
+        }
+    }
+
+    .mosaic {
+        &-section {
+            margin-top: $lobby-tag-margin;
+            @include respond-to(handhelds) {
+                margin-top: $lobby-tag-gap-mobile;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        &-noresults {
+            font-family: $font-family-main;
+            font-size: $middle-upp-plus-font-size;
+            color: $text-light;
+            letter-spacing: 0.12px;
+            text-align: center;
+            height: 35vh;
+            line-height: 1.21;
+            &-highlighted {
+                font-weight: 700;
+                color: $text-dark;
+            }
+        }
+
+        &-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: $lobby-button-margin-top;
+            margin-bottom: $lobby-button-margin-bottom;
+            @include respond-to(handhelds) {
+                margin-top: $lobby-button-margin-mobile;
+                margin-bottom: $lobby-button-margin-mobile;
+            }
+        }
+
+        &-more {
+            @include resetBtn;
+            max-width: 100%;
+            width: 297px;
+            height: 49px;
+            background-color: $system-active;
+            transform: skewX(20deg * $transform-direction);
+            &-text {
+                display: block;
+                width: 80%;
+                font-family: $font-family-main !important;
+                font-size: $middle-font-size;
+                font-weight: 500;
+                color: $white;
+                margin-#{$start-direction}: auto;
+                margin-#{$end-direction}: auto;
+                transform: skewX(-20deg * $transform-direction);
+            }
+        }
+    }
+
+    @import "tags";
+
+    .display-none {
+        display: none;
+    }
+}
+
+header .logoDiv {
+    @include respond-to(handhelds) {
+        height: 100%;
+    }
+}
+

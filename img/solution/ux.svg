@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>24D14E23-B096-4846-A055-5AED9FF686BA</title>
+    <g id="Soulotion" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Solution-Page---English-CRM" transform="translate(-676.000000, -933.000000)">
+            <g id="Soulotions" transform="translate(403.000000, 933.000000)">
+                <g id="UX-/-UI" transform="translate(235.000000, 0.000000)">
+                    <g id="Asset-13" transform="translate(38.000000, 0.000000)">
+                        <rect id="Rectangle" x="0" y="0" width="100" height="100"></rect>
+                        <line x1="74.98" y1="23.3" x2="25.02" y2="47.68" id="Path" stroke="#7968AD" stroke-width="1.89" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="25.02" y1="23.3" x2="74.98" y2="47.68" id="Path" stroke="#7968AD" stroke-width="1.89" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="25" y1="59" x2="75" y2="59" id="Path" stroke="#666666" stroke-width="1.89" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <path d="M74.11,23.89 L74.11,47.09 L25.89,47.09 L25.89,23.89 L74.11,23.89 M74.76,22 L25.24,22 C24.5574325,22.005439 24.005439,22.5574325 23.9999596,23.24 L23.9999596,47.74 C23.9973372,48.0715238 24.1264863,48.3905259 24.3590336,48.626824 C24.591581,48.8631222 24.9084761,48.9973584 25.24,49 L74.76,49 C75.0915239,48.9973584 75.408419,48.8631222 75.6409664,48.626824 C75.8735137,48.3905259 76.0026628,48.0715238 76.0000404,47.74 L76.0000404,23.24 C75.994561,22.5574325 75.4425675,22.005439 74.76,22 Z" id="Shape" fill="#7968AD" fill-rule="nonzero"></path>
+                        <path d="M85,15 L85,85 L15,85 L15,15 L85,15 M87,13 L13,13 L13,87 L87,87 L87,13 Z" id="Shape" fill="#666666" fill-rule="nonzero"></path>
+                        <line x1="25" y1="75" x2="75" y2="75" id="Path" stroke="#666666" stroke-width="1.89" stroke-linecap="round" stroke-linejoin="round"></line>
+                        <line x1="25" y1="67" x2="75" y2="67" id="Path" stroke="#666666" stroke-width="1.89" stroke-linecap="round" stroke-linejoin="round"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

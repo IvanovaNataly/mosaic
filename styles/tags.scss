@@ -1,0 +1,163 @@
+// Custom system
+@import 'variables';
+@import 'colors';
+
+.tags {
+    &-section {
+        width: $lobby-search-width;
+        margin: 0 auto;
+        @include respond-to(medium-screens) {
+            width: 100%;
+        }
+    }
+
+    &-button-container {
+        margin-top: $lobby-tag-gap-mobile;
+        padding-#{$end-direction}: 7px;
+        padding-#{$start-direction}: 7px;
+    }
+
+    &-button {
+        @include mobileElements;
+        width: 100%;
+        height: 38px;
+        background-color: $system-active;
+        border: none;
+        transform: skewX(20deg * $transform-direction);
+        &-text {
+            display: block;
+            font-family: $font-family-main !important;
+            font-size: $base-font-size;
+            font-weight: 500;
+            color: $white;
+            transform: skewX(-20deg * $transform-direction);
+        }
+    }
+
+    &-selected {
+        &-list {
+            @include mobileElements(flex);
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin-#{$start-direction}: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 3px 0 0 0;
+        }
+        &-item {
+            margin-top: 15px;
+            margin-#{$end-direction}: 15px;
+        }
+        &-button {
+            display: flex;
+            align-items: center;
+            font-size: $small-font-size;
+            color: $text-dark;
+            letter-spacing: 0.08px;
+            @include resetBtn;
+        }
+        &-remove {
+            font-size: 0;
+            margin-#{$end-direction}: 7px;
+            &:before {
+                @include icon('../img/remove-tag.svg', 18px, 18px);
+            }
+        }
+    }
+
+    &-modal {
+        display: none;
+        &.shown {
+            display: block;
+            width: 100vw;
+            height: calc(100vh - #{$header-height-mobile});
+            background-color: $white;
+            position: fixed;
+            top: $header-height-mobile;
+            #{$start-direction}: 0;
+            z-index: 100;
+        }
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: $lobby-tag-modal-header-height;
+            padding-#{$start-direction}: 22px;
+            padding-#{$end-direction}: 22px;
+            border-bottom: 1px solid $lobby-tag-modal-header-border;
+        }
+        &-cancel,
+        &-done {
+            @include resetBtn;
+            font-family: $font-family-main;
+            font-size: $base-font-size;
+            letter-spacing: 0.09px;
+            color: $system-active;
+            padding: 5px 10px;
+        }
+        &-title {
+            font-family: $font-family-main;
+            font-size: $middle-font-size;
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            margin-bottom: 0;
+        }
+    }
+
+    &-list-container {
+        height: calc(100vh - #{$lobby-tag-modal-header-height});
+        overflow: auto;
+    }
+
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        list-style: none;
+        &.desktop {
+            margin-top: $lobby-tag-margin - $lobby-tag-gap;
+            margin-#{$end-direction}: -20px;
+            padding-#{$start-direction}: 6px;
+            @include respond-to(handhelds) {
+                display: none;
+            }
+        }
+        &.mobile {
+            margin-top: $lobby-tag-margin-mobile - $lobby-tag-gap;
+            margin-#{$end-direction}: 25px;
+            padding-#{$start-direction}: 25px;
+        }
+    }
+
+    &-link {
+        @include resetBtn;
+        font-size: $tiny-font-size;
+        color: $text-dark;
+        letter-spacing: 0.07px;
+        height: $lobby-tag-height;
+        margin-top: $lobby-tag-gap;
+        margin-#{$end-direction}: 20px;
+        padding: 7px 20px;
+        background-color: $white;
+        border: 1px solid $lobby-tag-border;
+        border-radius: 2px;
+        transform: skewX(20deg * $transform-direction);
+        &.active {
+            background-color: $system-active;
+            border-color: $system-active;
+            .tags-link-text {
+                color: $white;
+            }
+        }
+    }
+
+    &-link-text {
+        display: block;
+        font-style: normal;
+        transform: skewX(-20deg * $transform-direction);
+    }
+}
+

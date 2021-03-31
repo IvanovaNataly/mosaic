@@ -1,0 +1,178 @@
+/*** LTR websites ***/
+$direction            :ltr;
+$opposite-direction   :rtl;
+
+$start-direction      :left;
+$end-direction        :right;
+
+$transform-direction  :1;
+
+/*** RTL websites ***/
+//$direction            :rtl;
+//$opposite-direction   :ltr;
+//
+//$start-direction      :right;
+//$end-direction        :left;
+//
+//$transform-direction  :-1;
+
+
+$font-family-accent: 'Roboto Slab', serif;
+$font-family-main: 'Alegreya Sans', sans-serif;
+
+// max screen width: 1920px;
+// min screen width: 1280px;
+$width-wide-screen: 1200px;
+$width-middle-screen: 755px;
+
+$header-height: 80px;
+$header-height-mobile: 45px;
+
+$profile-picture-size: 75px;
+$profile-picture-size-mobile: 60px;
+
+$acticle-picture-height: 425px;
+
+$social-height: 60px;
+
+$margin-top-mobile: 24px;
+
+$article-card-width: 378px;
+$article-card-heigth-preview: 496px;
+$article-card-heigth-lobby: 486px;
+$article-card-picture-height-preview: 235px;
+$article-card-picture-height-lobby: 174px;
+$article-card-grid-gate: 22px;
+$article-card-grid-mobile: 35px;
+
+$giant-font-size: 72px;
+$dominant-font-size: 56px;
+$large-font-size: 40px;
+$middle-plus-font-size: 30px;
+$middle-super-font-size: 28px;
+$middle-upper-plus-font-size: 25px;
+$middle-upp-plus-font-size: 24px;
+$middle-upper-font-size: 22px;
+$middle-up-font-size: 21px;
+$middle-font-size: 20px;
+$base-font-size: 18px;
+$small-font-size: 16px;
+$tiny-font-size: 15px;
+$weeny-font-size: 14px;
+
+//mobile
+$giant-font-size-mobile: 68px;
+$dominant-font-size-mobile: 28px;
+$large-font-size-mobile: 28px;
+$middle-plus-font-size-mobile: 24px;
+$tiny-font-size-mobile: 16px;
+$margin-side-mobile: 27px;
+
+//lobby
+$lobby-hero-height: 480px;
+$lobby-hero-height-mobile: 307px;
+$lobby-title-width: 1080px;
+$lobby-search-width: 953px;
+$lobby-search-height: 74px;
+$lobby-search-height-mobile: 54px;
+$lobby-grid-gate: 22px;
+
+$lobby-tag-height: 31px;
+$lobby-tag-margin: 70px;
+$lobby-tag-margin-mobile: 29px;
+$lobby-tag-gap: 16px;
+$lobby-tag-gap-mobile: 18px;
+$lobby-tag-modal-header-height: 59px;
+
+$lobby-button-width: 297px;
+$lobby-button-height: 49px;
+$lobby-button-margin-top: 117px;
+$lobby-button-margin-bottom: 97px;
+$lobby-button-margin-mobile: 67px;
+
+//solution
+$sol-description-width: 685px;
+$sol-description-top: 130px;
+$sol-description-top-mobile: 50px;
+$sol-panel-item-width: 240px;
+$sol-panel-item-height: 160px;
+$sol-panel-text-width: 175px;
+$sol-icon-size: 100px;
+$sol-icon-size-mobile: 70px;
+
+@mixin respond-to($media) {
+    @if $media == tiny {
+        @media screen and (max-width: 415px) { @content; }
+    }
+    @if $media == handhelds {
+        @media screen and (max-width: 540px) { @content; }
+    }
+    @if $media == phones {
+        @media screen and (max-width: 667px) { @content; }
+    }
+    @else if $media == small-screens {
+        @media screen and (max-width: 768px)  { @content; }
+    }
+    @else if $media == medium-screens {
+        @media screen and (max-width: 1024px) { @content; }
+    }
+    @else if $media == wide-screens {
+        @media screen and (max-width: 1366px) { @content; }
+    }
+    @else if $media == more-wide-screens {
+        @media screen and (max-width: 1700px) { @content; }
+    }
+    @else if $media == extra-wide-screens {
+        @media screen and (min-width: 1981px) { @content; }
+    }
+    @else if $media == plazmas {
+        @media screen and (min-width: 2561px) { @content; }
+    }
+    @else if $media == landscape {
+        @media screen and (min-width: 540px) and (orientation: landscape)
+        and (max-width: 962px) { @content; }
+    }
+}
+
+@mixin icon($path: '', $width: 28px, $height: 28px, $rotate: false) {
+    content: '';
+    display: inline-block;
+    width: $width;
+    height: $height;
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-position: center center;
+    @if $rotate {
+        transform: rotate($rotate);
+    }
+}
+
+@mixin clamp($lines: 2) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+}
+
+@mixin resetBtn() {
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+}
+
+@mixin mobileElements($display: block) {
+    display: none;
+    @include respond-to(handhelds) {
+        display: $display;
+    }
+}
+
+@mixin divider($width: 83px, $height: 6px, $color: $system-decoration) {
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    transform: skewX(20deg * $transform-direction);
+}

@@ -1,0 +1,133 @@
+.solution {
+    &-tablist {
+        display: flex;
+        padding-#{$start-direction}: 10px;
+        padding-#{$end-direction}: 10px;
+        @include respond-to(phones){
+            margin-bottom: 10px;
+        }
+    }
+    &-tab {
+        @include resetBtn;
+        font-family: $font-family-accent;
+        color: $text-light;
+        font-size: $middle-super-font-size;
+        text-transform: uppercase;
+        height: 76px;
+        position: relative;
+        cursor: pointer;
+        @include respond-to(phones){
+            font-size: $base-font-size;
+            letter-spacing: 0.09px;
+            height: 65px;
+        }
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $sol-tabs-border;
+            opacity: 0.25;
+            position: absolute;
+            bottom: 1px;
+        }
+        &.first-tab,
+        &.third-tab {
+            width: 332px;
+            @media screen and (max-width: $width-wide-screen) {
+                flex-basis: 28.2%;
+            }
+            @include respond-to(phones){
+                padding-top: 6px;
+            }
+        }
+        &.second-tab {
+            width: 516px;
+            @media screen and (max-width: $width-wide-screen) {
+                flex-basis: 42.72%;
+            }
+            @include respond-to(phones){
+                display: flex;
+                justify-content: center;
+            }
+        }
+        &.active {
+            font-weight: 700;
+            $colorScheme: ( fuchsia: $fuchsia, system-active: $system-active, beige: $beige );
+            @each $name, $value in $colorScheme {
+                &.#{$name}:after {
+                    @include divider($width: 100%, $color: $value);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &-panel-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0 0 55px 0;
+        & ~ & {
+            border-top: 1px solid $sol-tabs-border;
+        }
+        @include respond-to(phones) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &-panel-item {
+        width: $sol-panel-item-width;
+        height: $sol-panel-item-height;
+        margin-top: 55px;
+        @include respond-to(phones){
+            width: 33.33%;
+            margin-top: 30px;
+        }
+    }
+
+    &-panel-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-panel-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $sol-icon-size;
+        height: $sol-icon-size;
+        margin: 0 auto;
+        @include respond-to(phones){
+            width: $sol-icon-size-mobile;
+            height: $sol-icon-size-mobile;
+        }
+    }
+
+    &-panel-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &-panel-text {
+        font-family: $font-family-accent;
+        font-size: $middle-font-size;
+        text-align: center;
+        color: $text-light;
+        line-height: 26px;
+        width: $sol-panel-text-width;
+        margin-top: 7px;
+        margin-#{$start-direction}: auto;
+        margin-bottom: 0;
+        margin-#{$end-direction}: auto;
+        @include respond-to(phones){
+            width: auto;
+            font-size: $tiny-font-size-mobile;
+            line-height: 24px;
+        }
+    }
+}
+
