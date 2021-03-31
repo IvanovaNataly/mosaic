@@ -123,6 +123,7 @@
 		}
 	];
 
+
 function renderList() {
 	for (let i = 0; i < cards.length; i++) {
 		buildCard(cards[i]);
@@ -147,9 +148,39 @@ function buildCard(card) {
                     </a>`;
 	const node = document.createElement('li');
 	node.classList.add('article-card');
+	node.classList.add('id-' + card.id);
 	node.innerHTML = li;
 	mosaic.appendChild(node);
+	const startTop = node.offsetTop;
+	const startBottom = node.offsetTop + node.offsetHeight;
+	card.position = {
+		top: startTop,
+		bottom: startBottom
+	};
+	console.log('start' + card.id, card.position.top, card.position.bottom);
+	if (card.id > 2) {
+		const newBottom = calculateY(card);
+		node.style.cssText = 'transform:translateY(' + newBottom + 'px);';
+		console.log(card.id, newBottom);
+		card.position = {
+			top: startTop + newBottom,
+			bottom: startBottom + newBottom
+		};
+	}
+	console.log('end', card.position.top, card.position.bottom);
+	const postRect = node.getBoundingClientRect();
+	const postNode = document.querySelector('.id-' + card.id);
+	console.log('postRect', postRect.top, postRect.bottom);
 }
+
+function calculateY(card) {
+	const prevCardId = card.id - 3;
+	const prevCardBottom = cards[prevCardId].position.bottom + 20;
+	const difference = prevCardBottom - card.position.top;
+	return difference;
+}
+
+
 
 
 
