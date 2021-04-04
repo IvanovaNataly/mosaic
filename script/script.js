@@ -4,7 +4,7 @@
 		{
 			id: 0,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
 			date: '25 Aug 2020',
@@ -14,7 +14,7 @@
 		{
 			id: 1,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With the help of Elad’s CRM experts',
 			date: '25 Aug 2020',
@@ -24,7 +24,7 @@
 		{
 			id: 2,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With Service',
 			date: '25 Aug 2020',
@@ -34,7 +34,7 @@
 		{
 			id: 3,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With the help of Elad’s CRM experts, you can make the most',
 			date: '25 Aug 2020',
@@ -44,7 +44,7 @@
 		{
 			id: 4,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
 			date: '25 Aug 2020',
@@ -54,7 +54,7 @@
 		{
 			id: 5,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With the help of Elad’s CRM experts',
 			date: '25 Aug 2020',
@@ -64,7 +64,7 @@
 		{
 			id: 6,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With Service',
 			date: '25 Aug 2020',
@@ -74,7 +74,7 @@
 		{
 			id: 7,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
 			date: '25 Aug 2020',
@@ -84,7 +84,7 @@
 		{
 			id: 8,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With Service',
 			date: '25 Aug 2020',
@@ -94,7 +94,7 @@
 		{
 			id: 9,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With Service',
 			date: '25 Aug 2020',
@@ -104,7 +104,7 @@
 		{
 			id: 10,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field Long Long Long Long Long Service',
 			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
 			date: '25 Aug 2020',
@@ -114,7 +114,7 @@
 		{
 			id: 11,
 			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpg',
+			profileImg: 'img/profile.jpeg',
 			title: 'Streamline Your Field',
 			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
 			date: '25 Aug 2020',
