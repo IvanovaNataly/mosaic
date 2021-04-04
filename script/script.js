@@ -157,14 +157,15 @@ function buildCard(card) {
 		top: startTop,
 		bottom: startBottom
 	};
-	console.log('start' + card.id, card.position.top, card.position.bottom);
+	console.log('start' + card.id, card.position.top, node.offsetHeight, card.position.bottom);
 	if (card.id > 2) {
 		const newBottom = calculateY(card);
 		node.style.cssText = 'transform:translateY(' + newBottom + 'px);';
 		console.log(card.id, newBottom);
+		const postRect = node.getBoundingClientRect();
 		card.position = {
-			top: startTop + newBottom,
-			bottom: startBottom + newBottom
+			top: postRect.top,
+			bottom: postRect.bottom
 		};
 	}
 	console.log('end', card.position.top, card.position.bottom);
