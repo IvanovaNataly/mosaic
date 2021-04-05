@@ -154,7 +154,11 @@
 		gapX: 0,
 		gapY: 0
 	};
+	const startDirection = 'left';
+	const endDirection = 'right';
+	const stylesheet = document.styleSheets[0];
 	let widthRuleIndex;
+	let marginRuleIndex;
 
 function calculateCardsAmount() {
 	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -173,10 +177,16 @@ function addCssRule() {
 	const minusGaps = cardsParams.gapX * (cardsParams.cardsAmount - 1) + 'px';
 	const maxWidth = `calc((100% - ${minusGaps}) / ${cardsParams.cardsAmount});`;
 	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
-	const stylesheet = document.styleSheets[0];
 	if (widthRuleIndex && stylesheet.cssRules[widthRuleIndex]) stylesheet.deleteRule(widthRuleIndex);
 	widthRuleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
 	console.log(widthRuleIndex);
+
+	const margin = `margin-${endDirection}: ${cardsParams.gapX}px;`;
+	const marginRule = `${selector} > li:not(:nth-child(${cardsParams.cardsAmount}n))  { ${margin} }`;
+	if (marginRuleIndex && stylesheet.cssRules[marginRuleIndex]) stylesheet.deleteRule(marginRuleIndex);
+	marginRuleIndex = stylesheet.insertRule(marginRule, stylesheet.cssRules.length);
+	console.log(marginRule);
+	console.log(marginRuleIndex);
 }
 
 function renderList() {

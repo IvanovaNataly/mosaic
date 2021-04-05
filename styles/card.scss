@@ -45,38 +45,38 @@
         //height: $article-card-heigth-lobby;
         //max-width: calc((100% -  #{$lobby-grid-gate} * 3) / 4);
         //margin-bottom: $lobby-grid-gate;
-        &:not(:nth-child(4n)) {
-            margin-#{$end-direction}: $lobby-grid-gate;
-        }
-        @include respond-to(medium-screens) {
-            //max-width: calc((100% - #{$lobby-grid-gate} * 2) / 3);
-            &:not(:nth-child(4n)) {
-                margin-#{$end-direction}: 0;
-            }
-            &:not(:nth-child(3n)) {
-                margin-#{$end-direction}: $lobby-grid-gate;
-            }
-        }
-        @include respond-to(small-screens) {
-            //max-width: calc((100% - #{$lobby-grid-gate} * 1) / 2);
-            &:not(:nth-child(3n)) {
-                margin-#{$end-direction}: 0;
-            }
-            &:not(:nth-child(2n)) {
-                margin-#{$end-direction}: $lobby-grid-gate;
-            }
-        }
+        //&:not(:nth-child(4n)) {
+        //    margin-#{$end-direction}: $lobby-grid-gate;
+        //}
+        //@include respond-to(medium-screens) {
+        //    //max-width: calc((100% - #{$lobby-grid-gate} * 2) / 3);
+        //    &:not(:nth-child(4n)) {
+        //        margin-#{$end-direction}: 0;
+        //    }
+        //    &:not(:nth-child(3n)) {
+        //        margin-#{$end-direction}: $lobby-grid-gate;
+        //    }
+        //}
+        //@include respond-to(small-screens) {
+        //    //max-width: calc((100% - #{$lobby-grid-gate} * 1) / 2);
+        //    &:not(:nth-child(3n)) {
+        //        margin-#{$end-direction}: 0;
+        //    }
+        //    &:not(:nth-child(2n)) {
+        //        margin-#{$end-direction}: $lobby-grid-gate;
+        //    }
+        //}
         @include respond-to(handhelds) {
             //max-width: 100%;
-            height: auto;
-            margin-#{$start-direction}: 21px;
-            margin-#{$end-direction}: 21px;
+            //height: auto;
+            //margin-#{$start-direction}: 21px;
+            //margin-#{$end-direction}: 21px;
             padding-bottom: 22px;
-            &:not(:nth-child(4n)),
-            &:not(:nth-child(3n)),
-            &:not(:nth-child(2n)) {
-                margin-#{$end-direction}: 21px;
-            }
+            //&:not(:nth-child(4n)),
+            //&:not(:nth-child(3n)),
+            //&:not(:nth-child(2n)) {
+            //    margin-#{$end-direction}: 21px;
+            //}
             &:not(:last-child) {
                 margin-bottom: 40px;
             }
