@@ -1,6 +1,128 @@
 // (function () {
 	const selector = '.mosaic-list';
 	const mosaic = document.querySelector(selector);
+	const cards = [
+	{
+		id: 0,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 1,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With the help of Elad’s CRM experts',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 2,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 3,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With the help of Elad’s CRM experts, you can make the most',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 4,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 5,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With the help of Elad’s CRM experts',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 6,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 7,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 8,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 9,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 10,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field Long Long Long Long Long Service',
+		description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	},
+	{
+		id: 11,
+		author: 'Noa Berckovitz',
+		profileImg: 'img/profile.jpeg',
+		title: 'Streamline Your Field',
+		description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
+		date: '25 Aug 2020',
+		tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
+		background: 'https://www.fillmurray.com/755/625'
+	}
+];
 	const gridGap = 22;
 	const responsive = [
 		{
@@ -11,130 +133,29 @@
 			maxScreen: 1024,
 			cardsAmount: 3
 		}];
-	const cards = [
-		{
-			id: 0,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 1,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With the help of Elad’s CRM experts',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 2,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 3,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With the help of Elad’s CRM experts, you can make the most',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 4,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 5,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With the help of Elad’s CRM experts',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 6,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 7,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 8,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 9,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 10,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field Long Long Long Long Long Service',
-			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		},
-		{
-			id: 11,
-			author: 'Noa Berckovitz',
-			profileImg: 'img/profile.jpeg',
-			title: 'Streamline Your Field',
-			description: 'With the help of Elad’s CRM experts, you can make the most out of your Dynamics CRM Field Service',
-			date: '25 Aug 2020',
-			tags: ['Websites', 'Mobile Apps', 'UX / UI', 'Contact Centers', 'Self-Care Portals'],
-			background: 'https://www.fillmurray.com/755/625'
-		}
-	];
+
+	let cardsAmountG;
 	let ruleIndex = 0;
 
+function calculateCardsAmount() {
+	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	for (let i = 0; i < responsive.length; i++) {
+		if (screenWidth <= responsive[i].maxScreen) {
+			cardsAmountG = responsive[i].cardsAmount;
+			break;
+		}
+	}
+	const minusGaps = gridGap * (cardsAmountG - 1) + 'px';
+	return `calc((100% - ${minusGaps}) / ${cardsAmountG});`;
+}
+
+function addWidthRules() {
+	const maxWidth = calculateCardsAmount();
+	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
+	const stylesheet = document.styleSheets[ruleIndex];
+	if (stylesheet.cssRules[ruleIndex]) stylesheet.deleteRule(ruleIndex);
+	ruleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
+}
 
 function renderList() {
 	for (let i = 0; i < cards.length; i++) {
@@ -170,7 +191,7 @@ function buildCard(card) {
 		bottom: startBottom
 	};
 	// console.log('start' + card.id, card.position.top, node.offsetHeight, card.position.bottom);
-	if (card.id > 2) {
+	if (card.id > cardsAmountG - 1) {
 		const newBottom = calculateY(card);
 		node.style.cssText = 'transform:translateY(' + newBottom + 'px);';
 		// console.log(card.id, newBottom);
@@ -188,36 +209,13 @@ function buildCard(card) {
 }
 
 function calculateY(card) {
-	const prevCardId = card.id - 3;
+	const prevCardId = card.id - cardsAmountG;
 	const prevCardBottom = cards[prevCardId].position.bottom + gridGap;
 	const difference = prevCardBottom - card.position.top;
 	return difference;
 }
 
-function calculateCardsAmount() {
-	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-	let cardsAmount;
-	for (let i = 0; i < responsive.length; i++) {
-		if (screenWidth <= responsive[i].maxScreen) {
-			cardsAmount = responsive[i].cardsAmount;
-			break;
-		}
-	}
-	const gridsAmount = cardsAmount - 1;
-	const minusGaps = gridGap * gridsAmount + 'px';
-	const cardMaxWidth = `calc((100% - ${minusGaps}) / ${cardsAmount});`;
-	return cardMaxWidth;
-}
 
-function addWidthRules() {
-	const maxWidth = calculateCardsAmount();
-	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
-	console.log(maxWidthRule);
-	const stylesheet = document.styleSheets[ruleIndex];
-	if (stylesheet.cssRules[ruleIndex]) stylesheet.deleteRule(ruleIndex);
-	ruleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
-	console.log(ruleIndex);
-}
 
 addWidthRules();
 
