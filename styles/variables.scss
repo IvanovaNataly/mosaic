@@ -119,11 +119,8 @@ $sol-icon-size-mobile: 70px;
     @else if $media == wide-screens {
         @media screen and (max-width: 1366px) { @content; }
     }
-    @else if $media == more-wide-screens {
-        @media screen and (max-width: 1700px) { @content; }
-    }
     @else if $media == extra-wide-screens {
-        @media screen and (min-width: 1981px) { @content; }
+        @media screen and (min-width: 1980px) { @content; }
     }
     @else if $media == plazmas {
         @media screen and (min-width: 2561px) { @content; }

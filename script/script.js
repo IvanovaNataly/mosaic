@@ -1,5 +1,16 @@
 // (function () {
-	const mosaic = document.querySelector('.mosaic-list');
+	const selector = '.mosaic-list';
+	const mosaic = document.querySelector(selector);
+	const gridGap = 22;
+	const responsive = [
+		{
+			maxScreen: 1366,
+			cardsAmount: 4
+		},
+		{
+			maxScreen: 1024,
+			cardsAmount: 3
+		}];
 	const cards = [
 		{
 			id: 0,
@@ -122,6 +133,7 @@
 			background: 'https://www.fillmurray.com/755/625'
 		}
 	];
+	let ruleIndex = 0;
 
 
 function renderList() {
@@ -157,33 +169,57 @@ function buildCard(card) {
 		top: startTop,
 		bottom: startBottom
 	};
-	console.log('start' + card.id, card.position.top, node.offsetHeight, card.position.bottom);
+	// console.log('start' + card.id, card.position.top, node.offsetHeight, card.position.bottom);
 	if (card.id > 2) {
 		const newBottom = calculateY(card);
 		node.style.cssText = 'transform:translateY(' + newBottom + 'px);';
-		console.log(card.id, newBottom);
+		// console.log(card.id, newBottom);
 		const postRect = node.getBoundingClientRect();
 		card.position = {
 			top: postRect.top,
 			bottom: postRect.bottom
 		};
 	}
-	console.log('end', card.position.top, card.position.bottom);
-	const postRect = node.getBoundingClientRect();
-	const postNode = document.querySelector('.id-' + card.id);
-	console.log('postRect', postRect.top, postRect.bottom);
+	// console.log('end', card.position.top, card.position.bottom);
+	// const postRect = node.getBoundingClientRect();
+	// const postNode = document.querySelector('.id-' + card.id);
+	// console.log('postRect', postRect.top, postRect.bottom);
+
 }
 
 function calculateY(card) {
 	const prevCardId = card.id - 3;
-	const prevCardBottom = cards[prevCardId].position.bottom + 20;
+	const prevCardBottom = cards[prevCardId].position.bottom + gridGap;
 	const difference = prevCardBottom - card.position.top;
 	return difference;
 }
 
+function calculateCardsAmount() {
+	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	let cardsAmount;
+	for (let i = 0; i < responsive.length; i++) {
+		if (screenWidth <= responsive[i].maxScreen) {
+			cardsAmount = responsive[i].cardsAmount;
+			break;
+		}
+	}
+	const gridsAmount = cardsAmount - 1;
+	const minusGaps = gridGap * gridsAmount + 'px';
+	const cardMaxWidth = `calc((100% - ${minusGaps}) / ${cardsAmount});`;
+	return cardMaxWidth;
+}
 
+function addWidthRules() {
+	const maxWidth = calculateCardsAmount();
+	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
+	console.log(maxWidthRule);
+	const stylesheet = document.styleSheets[ruleIndex];
+	if (stylesheet.cssRules[ruleIndex]) stylesheet.deleteRule(ruleIndex);
+	ruleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
+	console.log(ruleIndex);
+}
 
-
+addWidthRules();
 
 renderList();
 

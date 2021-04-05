@@ -43,7 +43,7 @@
     }
     .mosaic & {
         //height: $article-card-heigth-lobby;
-        max-width: calc((100% -  #{$lobby-grid-gate} * 3) / 4);
+        //max-width: calc((100% -  #{$lobby-grid-gate} * 3) / 4);
         //margin-bottom: $lobby-grid-gate;
         &:not(:nth-child(4n)) {
             margin-#{$end-direction}: $lobby-grid-gate;
