@@ -154,7 +154,7 @@
 		gapX: 0,
 		gapY: 0
 	};
-	let ruleIndex = 0;
+	let widthRuleIndex;
 
 function calculateCardsAmount() {
 	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -173,9 +173,10 @@ function addCssRule() {
 	const minusGaps = cardsParams.gapX * (cardsParams.cardsAmount - 1) + 'px';
 	const maxWidth = `calc((100% - ${minusGaps}) / ${cardsParams.cardsAmount});`;
 	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
-	const stylesheet = document.styleSheets[ruleIndex];
-	if (stylesheet.cssRules[ruleIndex]) stylesheet.deleteRule(ruleIndex);
-	ruleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
+	const stylesheet = document.styleSheets[0];
+	if (widthRuleIndex && stylesheet.cssRules[widthRuleIndex]) stylesheet.deleteRule(widthRuleIndex);
+	widthRuleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
+	console.log(widthRuleIndex);
 }
 
 function renderList() {
