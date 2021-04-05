@@ -123,42 +123,55 @@
 		background: 'https://www.fillmurray.com/755/625'
 	}
 ];
-	const gridGap = 22;
 	const responsive = [
 		{
 			screenMoreThan: 1024,
-			cardsAmount: 4
+			cardsAmount: 4,
+			gridGapX: 22,
+			gridGapY: 22
 		},
 		{
 			screenMoreThan: 768,
-			cardsAmount: 3
+			cardsAmount: 3,
+			gridGapX: 22,
+			gridGapY: 22
 		},
 		{
 			screenMoreThan: 540,
-			cardsAmount: 2
+			cardsAmount: 2,
+			gridGapX: 40,
+			gridGapY: 30
 		},
 		{
 			screenMoreThan: 0,
-			cardsAmount: 1
+			cardsAmount: 1,
+			gridGapX: 0,
+			gridGapY: 40
 		}];
 
-	let cardsAmountG = 1;
+	let cardsParams = {
+		cardsAmount: 1,
+		gapX: 0,
+		gapY: 0
+	};
 	let ruleIndex = 0;
 
 function calculateCardsAmount() {
 	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	for (let i = 0; i < responsive.length; i++) {
 		if (screenWidth > responsive[i].screenMoreThan) {
-			cardsAmountG = responsive[i].cardsAmount;
+			cardsParams.cardsAmount = responsive[i].cardsAmount;
+			cardsParams.gapX = responsive[i].gridGapX;
+			cardsParams.gapY = responsive[i].gridGapY;
 			break;
 		}
 	}
-	const minusGaps = gridGap * (cardsAmountG - 1) + 'px';
-	return `calc((100% - ${minusGaps}) / ${cardsAmountG});`;
 }
 
-function addWidthRules() {
-	const maxWidth = calculateCardsAmount();
+function addCssRule() {
+	calculateCardsAmount();
+	const minusGaps = cardsParams.gapX * (cardsParams.cardsAmount - 1) + 'px';
+	const maxWidth = `calc((100% - ${minusGaps}) / ${cardsParams.cardsAmount});`;
 	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
 	const stylesheet = document.styleSheets[ruleIndex];
 	if (stylesheet.cssRules[ruleIndex]) stylesheet.deleteRule(ruleIndex);
@@ -199,7 +212,7 @@ function buildCard(card) {
 		bottom: startBottom
 	};
 	// console.log('start' + card.id, card.position.top, node.offsetHeight, card.position.bottom);
-	if (card.id > cardsAmountG - 1) {
+	if (card.id > cardsParams.cardsAmount - 1) {
 		const newBottom = calculateY(card);
 		node.style.cssText = 'transform:translateY(' + newBottom + 'px);';
 		// console.log(card.id, newBottom);
@@ -217,15 +230,15 @@ function buildCard(card) {
 }
 
 function calculateY(card) {
-	const prevCardId = card.id - cardsAmountG;
-	const prevCardBottom = cards[prevCardId].position.bottom + gridGap;
+	const prevCardId = card.id - cardsParams.cardsAmount;
+	const prevCardBottom = cards[prevCardId].position.bottom + cardsParams.gapY;
 	const difference = prevCardBottom - card.position.top;
 	return difference;
 }
 
 
 
-addWidthRules();
+addCssRule();
 
 renderList();
 
