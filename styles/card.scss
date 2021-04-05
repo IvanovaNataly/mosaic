@@ -49,7 +49,7 @@
             margin-#{$end-direction}: $lobby-grid-gate;
         }
         @include respond-to(medium-screens) {
-            max-width: calc((100% - #{$lobby-grid-gate} * 2) / 3);
+            //max-width: calc((100% - #{$lobby-grid-gate} * 2) / 3);
             &:not(:nth-child(4n)) {
                 margin-#{$end-direction}: 0;
             }
@@ -58,7 +58,7 @@
             }
         }
         @include respond-to(small-screens) {
-            max-width: calc((100% - #{$lobby-grid-gate} * 1) / 2);
+            //max-width: calc((100% - #{$lobby-grid-gate} * 1) / 2);
             &:not(:nth-child(3n)) {
                 margin-#{$end-direction}: 0;
             }
@@ -67,7 +67,7 @@
             }
         }
         @include respond-to(handhelds) {
-            max-width: 100%;
+            //max-width: 100%;
             height: auto;
             margin-#{$start-direction}: 21px;
             margin-#{$end-direction}: 21px;

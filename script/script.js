@@ -126,21 +126,29 @@
 	const gridGap = 22;
 	const responsive = [
 		{
-			maxScreen: 1366,
+			screenMoreThan: 1024,
 			cardsAmount: 4
 		},
 		{
-			maxScreen: 1024,
+			screenMoreThan: 768,
 			cardsAmount: 3
+		},
+		{
+			screenMoreThan: 540,
+			cardsAmount: 2
+		},
+		{
+			screenMoreThan: 0,
+			cardsAmount: 1
 		}];
 
-	let cardsAmountG;
+	let cardsAmountG = 1;
 	let ruleIndex = 0;
 
 function calculateCardsAmount() {
 	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 	for (let i = 0; i < responsive.length; i++) {
-		if (screenWidth <= responsive[i].maxScreen) {
+		if (screenWidth > responsive[i].screenMoreThan) {
 			cardsAmountG = responsive[i].cardsAmount;
 			break;
 		}
