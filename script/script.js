@@ -159,6 +159,7 @@
 	const stylesheet = document.styleSheets[0];
 	let widthRuleIndex;
 	let marginRuleIndex;
+	let resizeTimeout;
 
 function calculateCardsAmount() {
 	const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -190,6 +191,7 @@ function addCssRule() {
 }
 
 function renderList() {
+	addCssRule();
 	for (let i = 0; i < cards.length; i++) {
 		buildCard(cards[i]);
 	}
@@ -247,11 +249,22 @@ function calculateY(card) {
 	return difference;
 }
 
-
-
-addCssRule();
+function resizeThrottler() {
+	// ignore resize events as long as an renderList execution is in the queue
+	if ( !resizeTimeout ) {
+		resizeTimeout = setTimeout(function() {
+			resizeTimeout = null;
+			renderList();
+		}, 66);
+	}
+}
 
 renderList();
+
+window.addEventListener("resize", resizeThrottler, false);
+
+
+
 
 
 // }() );
