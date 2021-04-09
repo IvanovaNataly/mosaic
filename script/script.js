@@ -178,16 +178,13 @@ function addCssRule() {
 	const minusGaps = cardsParams.gapX * (cardsParams.cardsAmount - 1) + 'px';
 	const maxWidth = `calc((100% - ${minusGaps}) / ${cardsParams.cardsAmount});`;
 	const maxWidthRule = `${selector} > *  { max-width: ${maxWidth} }`;
-	if (widthRuleIndex && stylesheet.cssRules[widthRuleIndex]) stylesheet.deleteRule(widthRuleIndex);
-	widthRuleIndex = stylesheet.insertRule(maxWidthRule, stylesheet.cssRules.length);
-	console.log(widthRuleIndex);
+	widthRuleIndex && stylesheet.cssRules[widthRuleIndex] ?  stylesheet.deleteRule(widthRuleIndex) : widthRuleIndex = stylesheet.cssRules.length;
+	widthRuleIndex = stylesheet.insertRule(maxWidthRule, widthRuleIndex);
 
 	const margin = `margin-${endDirection}: ${cardsParams.gapX}px;`;
 	const marginRule = `${selector} > li:not(:nth-child(${cardsParams.cardsAmount}n))  { ${margin} }`;
-	if (marginRuleIndex && stylesheet.cssRules[marginRuleIndex]) stylesheet.deleteRule(marginRuleIndex);
-	marginRuleIndex = stylesheet.insertRule(marginRule, stylesheet.cssRules.length);
-	console.log(marginRule);
-	console.log(marginRuleIndex);
+	marginRuleIndex && stylesheet.cssRules[marginRuleIndex] ? stylesheet.deleteRule(marginRuleIndex) : marginRuleIndex = stylesheet.cssRules.length;
+	marginRuleIndex = stylesheet.insertRule(marginRule, marginRuleIndex);
 }
 
 function renderList() {
